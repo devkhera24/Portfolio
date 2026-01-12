@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Fascinate+Inline&family=Poppins:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --main-bg: black;
+    --main-color: #ff3556;
+    --white-color: #fff;
+    --disables-color: #fff3;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    color: var(--white-color);
+    background: var(--main-bg);
+    overflow-x: hidden;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: var(--main-bg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 3rem;
+    color: var(--white-color);
+    font-weight: 700;
+}
+
+nav a {
+    font-size: 2rem;
+    color: var(--white-color);
+    font-weight: 500;
+    margin-left: 3.5rem;
+    transition: .5s;
+}
+
+nav a:hover,
+nav a.active {
+    color: var(--main-color);
+}
+
+#menu-icon {
+    font-size: 4rem;
+    display: none;
+}
+
+.portfolio-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 2000px;
+    padding-top: 5rem;
+    overflow: hidden;
+}
+
+.book-wrapper {
+    position: relative;
+    width: 45rem;
+    height: 60rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.book {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+}
+
+.paper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform-style: preserve-3d;
+    transform-origin: left;
+    transition: transform 0.5s, z-index 0.5s;
+}
+
+.front,
+.back {
+    background-color: #1a1a1a;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+    border: .2rem solid var(--main-color);
+    backface-visibility: hidden;
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+.back {
+    z-index: 0;
+    transform: rotateY(180deg);
+}
+
+.paper.flipped {
+    transform: rotateY(-180deg);
+}
+
+/* Page content styling */
+.page-num {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    font-size: 1.5rem;
+    color: var(--main-color);
+    font-weight: 700;
+}
+
+.back .page-num {
+    left: 2rem;
+    right: auto;
+}
+
+/* Page content styling */
+.cover-content {
+    text-align: center;
+}
+
+.cover-content h1 {
+    font-size: 6rem;
+    color: var(--main-color);
+    margin-bottom: 2rem;
+}
+
+.cover-content p {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.cover-content i {
+    font-size: 8rem;
+    color: var(--main-color);
+}
+
+.project-content {
+    width: 100%;
+    text-align: center;
+}
+
+.project-content h2 {
+    font-size: 3.5rem;
+    color: var(--main-color);
+    margin-bottom: 2rem;
+}
+
+.project-content p {
+    font-size: 1.8rem;
+    margin-bottom: 3rem;
+    line-height: 1.6;
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.links a {
+    font-size: 1.6rem;
+    color: var(--main-bg);
+    background: var(--main-color);
+    padding: 1rem 2rem;
+    border-radius: .5rem;
+    font-weight: 600;
+    transition: .3s;
+    border: .2rem solid var(--main-color);
+}
+
+.links a:hover {
+    background: transparent;
+    color: var(--main-color);
+}
+
+.links a i {
+    margin-right: .5rem;
+}
+
+/* Buttons */
+.controller {
+    position: absolute;
+    bottom: -8rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 3rem;
+}
+
+.controller button {
+    width: 5rem;
+    height: 5rem;
+    background: transparent;
+    border: .2rem solid var(--main-color);
+    border-radius: 50%;
+    color: var(--main-color);
+    font-size: 3rem;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.controller button:hover {
+    background: var(--main-color);
+    color: var(--main-bg);
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+/* Transition from other pages */
+.transition {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--main-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.8s ease;
+}
+
+.transition.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.transition span {
+  font-size: 8rem;
+  font-weight: 700;
+  color: var(--main-color);
+  animation: scaleUp 1s ease forwards;
+}
+
+@keyframes scaleUp {
+  0% { transform: scale(0); opacity: 0; }
+  50% { transform: scale(1.3); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@media (max-width: 600px) {
+    .book {
+        width: 35rem;
+        height: 50rem;
+    }
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev Khera - Portfolio</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="styleport.css">
+</head>
+<body>
+    <div class="transition">
+        <span>DK</span>
+    </div>
+    <header>
+        <a href="#" class="logo">Dev.</a>
+        <i class='bx bx-menu' id="menu-icon"></i> 
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="skill.html">Skills</a>
+            <a href="education.html">Education</a>
+            <a href="portfolio.html" class="active">Portfolio</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="portfolio-container">
+        <div class="book-wrapper">
+            <div class="book" id="book">
+                <!-- Cover Page -->
+                <div class="paper" id="p1">
+                    <div class="front">
+                        <div class="cover-content">
+                            <h1>Projects</h1>
+                            <p>Flip to explore</p>
+                            <i class='bx bxs-book-open'></i>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="project-content">
+                            <span class="page-num">1</span>
+                            <h2>Social Media App</h2>
+                            <p>A full-stack social media platform developed using React and Firebase. Features include real-time chat, post sharing, and user authentication.</p>
+                            <div class="links">
+                                <a href="#" target="_blank"><i class='bx bx-link-external'></i> Live Link</a>
+                                <a href="#" target="_blank"><i class='bx bxl-github'></i> Repo</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Page 2 -->
+                <div class="paper" id="p2">
+                    <div class="front">
+                        <div class="project-content">
+                            <span class="page-num">2</span>
+                            <h2>E-Commerce Dashboard</h2>
+                            <p>An interactive dashboard for managing online stores. Built with Vue.js and D3.js for data visualization of sales and inventory.</p>
+                            <div class="links">
+                                <a href="#" target="_blank"><i class='bx bx-link-external'></i> Live Link</a>
+                                <a href="#" target="_blank"><i class='bx bxl-github'></i> Repo</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="project-content">
+                            <span class="page-num">3</span>
+                            <h2>AI Chatbot</h2>
+                            <p>An intelligent chatbot powered by OpenAI API, integrated into a sleek web interface. Capable of handling complex queries and providing automated support.</p>
+                            <div class="links">
+                                <a href="#" target="_blank"><i class='bx bx-link-external'></i> Live Link</a>
+                                <a href="#" target="_blank"><i class='bx bxl-github'></i> Repo</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Page 3 -->
+                <div class="paper" id="p3">
+                    <div class="front">
+                        <div class="project-content">
+                            <span class="page-num">4</span>
+                            <h2>Recipe Finder</h2>
+                            <p>A web application that allows users to search for recipes based on ingredients. Utilizes Spoonacular API and features a responsive design.</p>
+                            <div class="links">
+                                <a href="#" target="_blank"><i class='bx bx-link-external'></i> Live Link</a>
+                                <a href="#" target="_blank"><i class='bx bxl-github'></i> Repo</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="project-content">
+                            <h2>The End</h2>
+                            <p>Thank you for exploring my work! Feel free to contact me for collaborations.</p>
+                            <div class="links">
+                                <a href="index.html" class="btn">Back to Home</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Controller buttons -->
+            <div class="controller">
+                <button id="prev-btn"><i class='bx bx-chevron-left'></i></button>
+                <button id="next-btn"><i class='bx bx-chevron-right'></i></button>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+    <script src="portscript.js"></script>
+</body>
+</html>
