@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dev Khera - Skills</title>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="styleskill.css">
+</head>
+<body>
+  <header>
+    <a href="#" class="logo">Dev.</a>
+    <i class='bx bx-menu' id="menu-icon"></i> 
+    <nav>
+      <a href="index.html" >Home</a>
+      <a href="about.html">About</a>
+      <a href="skill.html" class = "active">Skills</a>
+      <a href="education.html">Education</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main class="skills-container">
+
+    <div class="skill-box" data-text="Markup Language Master. I can easily create the builderman layout of any website">HTML</div>
+    <div class="skill-box" data-text="Styling Expert. Styling everuything in a cool aesthetic and 3D way as in this website also.">CSS</div>
+    <div class="skill-box" data-text="Web Dynamics, make the website respond to you.">JavaScript</div>
+
+
+    <div class="skill-box side" data-text="Programming Power. Learning the fundamentals of programming soon diving into C++">Java</div>
+
+    <div class="empty-center">
+        <img class = "image-gradient" src="gradient.png">
+        <div class = "layer-blur"></div>
+          <spline-viewer url="https://prod.spline.design/RjxX9z5IXtZNEqFJ/scene.splinecode"></spline-viewer>
+    </div>
+
+  
+    <div class="skill-box side" data-text="Server Stuff, learning it alongside to increase the webdev skills">Node JS</div>
+
+  
+    <div class="skill-box" data-text="Creative Platform, started mmy coding career here only, fun way of block coding">Code.org</div>
+    <div class="skill-box" data-text="Frontend Framework, learning alongside to strengthen web development">React JS</div>
+    <div class="skill-box" data-text="Using the language to make piplines databases and a various other applications">Python</div>
+  </main>
+
+  
+  <div class="popup">
+    <div class="popup-content">
+      <span class="close">&times;</span>
+      <h2 id="popup-title"></h2>
+      <p id="popup-text"></p>
+    </div>
+  </div>
+
+  
+  <script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.64/build/spline-viewer.js"></script>
+  <script src="skillscript.js"></script>
+</body>
+</html>
