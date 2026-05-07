@@ -199,8 +199,9 @@ section{
 .home-img .img-box .img-item img{
     width: 100%;
     height: 100%;
-    object-fit: contain;
-    mix-blend-mode: lighten;
+    object-fit: cover;
+    object-position: center;
+    display: block;
 }
 .scroll-indicator {
   position: fixed;
